@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haven Chennai Game Jam — Team Spretech × Bridgethegap × Hack Club</title>
+  <meta name="description" content="Join the 12-Hour Haven Game Jam in Chennai! Organized by Team Spretech, Bridgethegap Organization, and Hack Club Haven. 100% Free for teens. Registrations & Schedule coming soon!">
+
+  <!-- Google Fonts: DynaPuff, Fredoka, Sniglet, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500;700;900&family=Fredoka:wght@400;600;700&family=Sniglet:wght@400;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="haven-theme">
+
+  <!-- Hack Club Top Ribbon Flag -->
+  <a href="https://hackclub.com/" target="_blank" rel="noopener noreferrer" class="hackclub-flag" title="Part of Hack Club">
+    <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Flag">
+  </a>
+
+  <!-- Cozy Navigation Bar -->
+  <nav class="haven-nav">
+    <div class="nav-wrapper">
+      <a href="#" class="haven-logo-link">
+        <img src="assets/havenlogo.jpeg" alt="Hack Club Haven Logo" class="haven-nav-logo">
+      </a>
+
+      <div class="haven-nav-links" id="nav-links">
+        <a href="#what-is-gamejam">Stories</a>
+        <a href="#how-it-works">About</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="haven-nav-right">
+        <button id="sfx-toggle" class="btn-sfx-haven">
+          <i class="fa-solid fa-volume-high"></i>
+          <span>SFX ON</span>
+        </button>
+        <div class="badge-cs-nav">
+          <span class="dot-pulse"></span>
+          <span>REGISTRATIONS COMING SOON</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Canopy Section -->
+  <header class="haven-hero-section">
+    <div class="canopy-overlay"></div>
+    <div class="hero-content-wrapper">
+      
+      <!-- Kicker & Organizers Pill -->
+      <div class="hero-kicker-bar">
+        <span class="kicker-pill"><i class="fa-solid fa-location-dot"></i> CHENNAI, INDIA</span>
+        <span class="kicker-pill kicker-12h"><i class="fa-solid fa-bolt"></i> 12-HOUR GAME JAM</span>
+        <span class="kicker-pill kicker-org"><i class="fa-solid fa-people-roof"></i> TEAM SPRETECH × BRIDGETHEGAP × HACK CLUB</span>
+      </div>
+
+      <h1 class="haven-hero-title">
+        Join the 12-Hour Haven Game Jam<br>
+        <span class="title-highlight">in Chennai!</span>
+      </h1>
+
+      <p class="haven-hero-subtitle">
+        Brought to you by <strong>Team Spretech</strong>, <strong>Bridgethegap Organization</strong>, and <strong>Hack Club Haven</strong>! 
+        The ultimate 12-hour video game development festival for teens in Chennai. Learn, build games, make awesome friends, eat <strong>free food</strong>, and win <strong>epic prizes</strong>!
+      </p>
+
+      <div class="hero-grid-action">
+        
+        <!-- Mascot Left -->
+        <div class="mascot-box">
+          <img src="assets/hedgehog_mascot.jpg" alt="Haven Hedgehog Mascot" class="hedgehog-img">
+          <div class="scroll-prompt">
+            <span>scroll down</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+
+        <!-- Registration Notice Card (Right) -->
+        <div class="haven-coming-soon-card">
+          <div class="cs-badge-title">
+            <i class="fa-solid fa-star"></i> REGISTRATIONS COMING SOON
+          </div>
+          <p class="cs-text">Get ready! Admission, food, drinks, and swag will be <strong>100% FREE</strong> for all high school and middle school teens in Chennai!</p>
+
+          <!-- Countdown Timer -->
+          <div class="haven-countdown-box">
+            <div class="cd-label">ESTIMATED DROP COUNTDOWN</div>
+            <div class="cd-timer" id="countdown-timer">
+              <div class="cd-item"><span id="cd-days">00</span><label>DAYS</label></div>
+              <div class="cd-item"><span id="cd-hours">00</span><label>HOURS</label></div>
+              <div class="cd-item"><span id="cd-mins">00</span><label>MINS</label></div>
+              <div class="cd-item"><span id="cd-secs">00</span><label>SECS</label></div>
+            </div>
+          </div>
+
+          <!-- Buttons with explicit updated Slack Channel Link -->
+          <div class="cs-btn-row">
+            <button class="btn-haven-primary" id="open-calendar-modal">
+              <i class="fa-solid fa-bell"></i> Remind Me (Add to Calendar)
+            </button>
+            <a href="https://hackclub.enterprise.slack.com/archives/C0C07T5LB60" target="_blank" rel="noopener noreferrer" class="btn-haven-secondary">
+              <i class="fa-brands fa-slack"></i> Join Hack Club Slack
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Winding Path Section (Green Field Background) -->
+  <main class="haven-path-section">
+    <div class="path-container">
+
+      <!-- Signpost 1: What is a game jam? -->
+      <div class="signpost-box" id="what-is-gamejam">
+        <div class="signpost-wood">
+          <h2>What is a game jam?</h2>
+          <p>A 12-hour sprint where teenagers gather to design, code, draw, and compose video games from scratch! 100% beginner friendly—no prior experience needed.</p>
+        </div>
+      </div>
+
+      <!-- Card 1: Learn and Build -->
+      <div class="path-card-wrapper left-card" id="learn-build">
+        <div class="path-card">
+          <h3>Learn and Build</h3>
+          <div class="card-photo-grid">
+            <img src="assets/learn_build.jpg" alt="Learn to build games">
+            <img src="assets/hero_banner.jpg" alt="Workshops and code">
+            <img src="assets/food_prizes.jpg" alt="Game dev tools">
+          </div>
+          <p>Learn to code, draw pixel art, compose 8-bit sound effects, and use engines like Godot, Kaboom.js, Unity, Pygame & Scratch with step-by-step workshops!</p>
+          
+          <!-- Engine Selector Tabs -->
+          <div class="mini-engine-picker">
+            <div class="picker-tabs" id="engine-tabs">
+              <button class="p-tab active" data-engine="godot">Godot</button>
+              <button class="p-tab" data-engine="kaboom">Kaboom.js</button>
+              <button class="p-tab" data-engine="unity">Unity</button>
+              <button class="p-tab" data-engine="pygame">Pygame</button>
+              <button class="p-tab" data-engine="scratch">Scratch</button>
+            </div>
+            <div class="picker-desc" id="engine-display">
+              <strong id="engine-title">Godot Engine (2D & 3D)</strong>
+              <p id="engine-desc">Free & lightweight! Perfect for 2D pixel platformers and 3D games.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Make Friends -->
+      <div class="path-card-wrapper right-card" id="make-friends">
+        <div class="path-card">
+          <h3>Make Friends</h3>
+          <div class="card-photo-grid">
+            <img src="assets/friends_community.jpg" alt="Make friends at game jam">
+            <img src="assets/hero_banner.jpg" alt="Teen builders collaboration">
+            <img src="assets/food_prizes.jpg" alt="Midnight chai hangouts">
+          </div>
+          <p>Over half of participants arrive solo! Join our fun speed-friending icebreakers to form a 2-4 person dream team with fellow teen creators in Chennai.</p>
+          
+          <!-- Archetype Selector -->
+          <div class="mini-role-picker">
+            <div class="role-tabs" id="archetype-buttons">
+              <button class="r-tab active" data-role="coder">💻 Coder</button>
+              <button class="r-tab" data-role="artist">🎨 Artist</button>
+              <button class="r-tab" data-role="musician">🎵 Musician</button>
+              <button class="r-tab" data-role="designer">💡 Designer</button>
+            </div>
+            <div class="role-desc" id="archetype-desc">
+              <strong>The Coding Wizard:</strong> You bring game mechanics to life! You connect player controls, write game physics, and fix bugs.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Free Food and Prizes -->
+      <div class="path-card-wrapper left-card" id="food-prizes">
+        <div class="path-card">
+          <h3>Free Food and Prizes</h3>
+          <div class="card-photo-grid">
+            <img src="assets/food_prizes.jpg" alt="Free pizza and snacks">
+            <img src="assets/learn_build.jpg" alt="Trophies and hardware prizes">
+            <img src="assets/friends_community.jpg" alt="Boba tea and chai station">
+          </div>
+          <p>Enjoy 100% free hot pizza, samosas, boba tea, snacks & chai during the 12-hour event! Compete for trophies like Best Game, Best Pixel Art, Best Sound & Fan Favorite!</p>
+          
+          <div class="free-perks-pills">
+            <span>🍕 Fresh Hot Pizzas</span>
+            <span>🧋 Boba Tea & Chai</span>
+            <span>🏆 Trophies & Keyboards</span>
+            <span>🎒 Custom Swag Bags</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- How It Works Section -->
+  <section class="haven-how-section" id="how-it-works">
+    <div class="container">
+      
+      <h2 class="section-how-title">How 12 Hours of Game Jam Magic Happens!</h2>
+
+      <div class="how-grid">
+        
+        <div class="how-card">
+          <div class="how-num">1</div>
+          <img src="assets/hero_banner.jpg" alt="Secret Theme Reveal" class="how-img">
+          <h4>Secret Theme Reveal</h4>
+          <p>Morning Check-in: We unveil the secret theme! Solo attendees meet up to form dream teams.</p>
+        </div>
+
+        <div class="how-card">
+          <div class="how-num">2</div>
+          <img src="assets/learn_build.jpg" alt="Brainstorm & Build" class="how-img">
+          <h4>Brainstorm & Build</h4>
+          <p>Sketch your game ideas, choose your engine, draw sprites, and code your game prototype.</p>
+        </div>
+
+        <div class="how-card">
+          <div class="how-num">3</div>
+          <img src="assets/food_prizes.jpg" alt="Food & Music Breakdown" class="how-img">
+          <h4>Food & Music Sprints</h4>
+          <p>Fuel up on hot pizza & samosas, compose 8-bit chiptunes, and get help from expert mentors.</p>
+        </div>
+
+        <div class="how-card">
+          <div class="how-num">4</div>
+          <img src="assets/friends_community.jpg" alt="Arcade Showcase" class="how-img">
+          <h4>Arcade Showcase</h4>
+          <p>Evening Finale: Submit your game, playtest everyone's creations, and win trophies & swag!</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: SCHEDULE -->
+  <section class="haven-schedule-section" id="schedule">
+    <div class="container">
+      
+      <div class="signpost-box text-center">
+        <div class="signpost-wood">
+          <h2>Event Schedule</h2>
+          <p>The 12-Hour Game Jam Timeline</p>
+        </div>
+      </div>
+
+      <div class="schedule-coming-soon-box">
+        <div class="sch-badge">
+          <i class="fa-solid fa-clock"></i> SCHEDULE COMING SOON
+        </div>
+        <h3>Full 12-Hour Jam Schedule Dropping Soon!</h3>
+        <p>We are polishing the exact timeline for check-in, Workshops, Theme Unveiling, Lunch & Dinner Sprints, Playtesting Arcade, and Award Ceremony.</p>
+
+        <!-- Preview Teaser Columns -->
+        <div class="schedule-teaser-grid">
+          <div class="sch-col">
+            <div class="sch-time-tag">MORNING</div>
+            <h4>Opening & Theme Reveal</h4>
+            <p>Check-in, breakfast snacks, keynote, secret theme unveiling & team matchmaking.</p>
+          </div>
+
+          <div class="sch-col">
+            <div class="sch-time-tag">AFTERNOON</div>
+            <h4>Building & Lunch Feast</h4>
+            <p>Game dev workshops, coding sprints, hot pizza lunch, chai breaks & mentor debugging.</p>
+          </div>
+
+          <div class="sch-col">
+            <div class="sch-time-tag">EVENING</div>
+            <h4>Showcase & Awards</h4>
+            <p>Game submissions, Arcade playtesting showcase, voting, and trophy award ceremony!</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Community Picnic Section (Red Checkered Blanket) -->
+  <section class="haven-picnic-section">
+    <div class="picnic-content">
+      
+      <!-- Duck Playing Guitar Mascot -->
+      <div class="duck-mascot-wrapper">
+        <img src="assets/duck_guitar.jpg" alt="Duck playing guitar mascot" class="duck-guitar-img">
+      </div>
+
+      <p class="picnic-subtitle">Experience the cozy atmosphere of building games with friends in Chennai!</p>
+
+      <div class="picnic-video-grid">
+        <div class="picnic-card">
+          <div class="v-thumb">
+            <img src="assets/hero_banner.jpg" alt="Arcade Demos">
+            <div class="play-btn-circle"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <h4>Arcade Demos</h4>
+          <p>Watch video highlights of games built at past Haven jams!</p>
+        </div>
+
+        <div class="picnic-card">
+          <div class="v-thumb">
+            <img src="assets/learn_build.jpg" alt="Coding Workshops">
+            <div class="play-btn-circle"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <h4>Coding Workshops</h4>
+          <p>See how beginners create their first game in 60 minutes.</p>
+        </div>
+
+        <div class="picnic-card">
+          <div class="v-thumb">
+            <img src="assets/food_prizes.jpg" alt="Prize Ceremonies">
+            <div class="play-btn-circle"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <h4>Prize Ceremony</h4>
+          <p>Celebrations, trophies, swag bags & custom sticker drops!</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Mini Arcade Section -->
+  <section class="haven-arcade-section" id="mini-arcade">
+    <div class="container">
+      <div class="arcade-cabinet-cozy">
+        <div class="arcade-header">
+          <span>🕹️ HAVEN CHENNAI BUG CATCHER</span>
+          <span>SCORE: <span id="game-score">0</span> / 10</span>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="arcade-canvas" width="640" height="320"></canvas>
+          <div id="arcade-overlay" class="arcade-overlay">
+            <h3>Press START to Play!</h3>
+            <p>Use <strong>Arrow Keys</strong> or <strong>A / D</strong> to move your player and catch falling game jam ideas!</p>
+            <button class="btn-haven-primary" id="start-game-btn"><i class="fa-solid fa-play"></i> START GAME</button>
+          </div>
+        </div>
+        <div class="arcade-touch-bar">
+          <button id="btn-touch-left" class="btn-touch"><i class="fa-solid fa-arrow-left"></i> LEFT</button>
+          <button id="btn-touch-right" class="btn-touch">RIGHT <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERHAULED & HIGH VISIBILITY: SUPPORTERS & SPONSORS SECTION -->
+  <section class="haven-supporters-section" id="sponsors">
+    <div class="container">
+      
+      <div class="supporters-signpost text-center">
+        <div class="signpost-wood-hero">
+          <h2>Organizers & Supporters</h2>
+          <p>Brought to you by passionate youth organizations in Chennai & worldwide</p>
+        </div>
+      </div>
+
+      <!-- High Visibility Featured Organizers Cards -->
+      <div class="featured-organizers-grid">
+        
+        <!-- Team Spretech Card -->
+        <div class="org-card-featured spretech-theme">
+          <div class="org-logo-container">
+            <img src="assets/spretech_logo.png" alt="Team Spretech Logo" class="org-logo-img">
+          </div>
+          <div class="org-card-body">
+            <div class="org-role-badge badge-spretech">CO-ORGANIZER</div>
+            <h3 class="org-title">TEAM SPRETECH</h3>
+            <p class="org-desc">Youth technology community driving innovation, tech workshops, and hackathons across Chennai.</p>
+            <a href="https://spretech.in" target="_blank" rel="noopener noreferrer" class="org-site-pill"><i class="fa-solid fa-globe"></i> spretech.in</a>
+          </div>
+        </div>
+
+        <!-- Bridgethegap Organization Card -->
+        <div class="org-card-featured btg-theme">
+          <div class="org-logo-container">
+            <img src="assets/bridgethegap_logo.svg" alt="Bridgethegap Organization Logo" class="org-logo-img">
+          </div>
+          <div class="org-card-body">
+            <div class="org-role-badge badge-btg">CO-ORGANIZER</div>
+            <h3 class="org-title">BRIDGETHEGAP</h3>
+            <p class="org-desc">Youth-led non-profit empowering students through creative technology, education, and mentorship.</p>
+            <a href="https://bridgethegaprobotics.com" target="_blank" rel="noopener noreferrer" class="org-site-pill"><i class="fa-solid fa-globe"></i> bridgethegaprobotics.com</a>
+          </div>
+        </div>
+
+        <!-- Hack Club Haven Card -->
+        <div class="org-card-featured haven-theme-card">
+          <div class="org-logo-container">
+            <img src="assets/havenlogo.jpeg" alt="Hack Club Haven Logo" class="org-logo-img">
+          </div>
+          <div class="org-card-body">
+            <div class="org-role-badge badge-haven">GLOBAL PARTNER</div>
+            <h3 class="org-title">HACK CLUB HAVEN</h3>
+            <p class="org-desc">Global non-profit community empowering high school coders and game developers worldwide.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- High Visibility Sponsors Coming Soon Box -->
+      <div class="sponsors-banner-box">
+        <div class="sp-glow-icon"><i class="fa-solid fa-sparkles"></i></div>
+        <h3>SPONSORS COMING SOON</h3>
+        <p>We are actively onboarding awesome tech companies, gaming studios, and educational sponsors to support our teen participants with epic prizes, hardware & swag!</p>
+        <a href="mailto:mohamedrayyanali21@gmail.com?subject=Haven%20Chennai%20Game%20Jam%20Sponsorship%20Inquiry" target="_blank" rel="noopener noreferrer" class="btn-haven-primary" id="btn-sponsor-inquiry">
+          <i class="fa-solid fa-envelope"></i> Become a Sponsor (Inquire)
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section (Sitting on Carrot Patch Field) -->
+  <section class="haven-faq-section" id="faq">
+    <div class="container container-sm">
+      
+      <div class="faq-signpost">
+        <h2>FAQ</h2>
+      </div>
+
+      <div class="faq-grid" id="faq-accordion">
+        
+        <div class="accordion-item active">
+          <button class="accordion-header">
+            <span>Who is eligible to participate?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>Haven Chennai Game Jam is open to <strong>all teenagers</strong>! If you are in high school or middle school (roughly 13-18 years old), you are warmly invited to join.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>How long is the game jam?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>It is an action-packed <strong>12-Hour Game Jam</strong>! Perfect for building a complete game, eating great food, and showcasing it all in a single day!</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Who is organizing the jam?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>It is organized by <strong>Team Spretech</strong> and <strong>Bridgethegap Organization</strong> in partnership with <strong>Hack Club Haven</strong>!</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Is it really 100% free?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>Yes! Admission, food, drinks, workshops, swag, and hardware access are <strong>100% free</strong>. You don't need to pay anything!</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>When will registrations open?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>Registrations are opening <strong>very soon</strong>! Click "Add to Calendar" or join the Hack Club Slack to get notified instantly.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>What should I bring?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>Bring your laptop, charger, water bottle, and headphones! If you don't have a laptop, reach out to us and we'll help arrange one.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Big Bottom CTA -->
+  <section class="haven-signup-section">
+    <div class="signup-cta-box">
+      <h2>Registrations Opening Soon!</h2>
+      <button class="btn-haven-big" id="open-calendar-modal-2">
+        <i class="fa-solid fa-bell"></i> Remind Me (Add to Calendar)
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="haven-footer">
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="f-left">
+          <img src="assets/havenlogo.jpeg" alt="Haven Logo" class="f-haven-logo">
+          <div class="f-links">
+            <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer">Hack Club HQ</a>
+            <a href="https://hackclub.enterprise.slack.com/archives/C0C07T5LB60" target="_blank" rel="noopener noreferrer">Hack Club Slack Channel</a>
+            <a href="https://spretech.in" target="_blank" rel="noopener noreferrer">spretech.in</a>
+            <a href="https://bridgethegaprobotics.com" target="_blank" rel="noopener noreferrer">bridgethegaprobotics.com</a>
+          </div>
+        </div>
+        <div class="f-right">
+          <p>Organized with ❤️ by Team Spretech, Bridgethegap Organization, and Hack Club Haven for teen game creators in Chennai, Tamil Nadu.</p>
+          <p class="f-copy">© 2026 Haven Chennai Game Jam.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Calendar Modal -->
+  <div class="modal-overlay" id="calendar-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header">
+        <i class="fa-solid fa-calendar-check modal-icon"></i>
+        <h3>Save Haven Chennai Game Jam</h3>
+        <p>Set a reminder so you don't miss when registration opens!</p>
+      </div>
+
+      <div class="calendar-options">
+        <button class="cal-btn" id="cal-google">
+          <i class="fa-brands fa-google"></i> Google Calendar
+        </button>
+        <button class="cal-btn" id="cal-ics">
+          <i class="fa-solid fa-file-export"></i> Download iCal / Outlook (.ics)
+        </button>
+      </div>
+
+      <div class="modal-footer text-center">
+        <p><i class="fa-solid fa-circle-info"></i> Registrations will be 100% free for all teen participants!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
